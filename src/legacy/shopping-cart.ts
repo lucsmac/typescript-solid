@@ -1,7 +1,7 @@
 type CartItem = { name: string; price: number };
 type OrderStatus = 'open' | 'closed';
 
-export class ShoppingCart {
+export class LegacyShoppingCart {
   private readonly _items: CartItem[] = [];
   private _orderStatus: OrderStatus = 'open';
 
@@ -57,7 +57,7 @@ export class ShoppingCart {
   }
 }
 
-const shoppingCart = new ShoppingCart();
+const shoppingCart = new LegacyShoppingCart();
 shoppingCart.addItem({ name: 'Camiseta', price: 49.9 });
 shoppingCart.addItem({ name: 'Bermuda', price: 79.9 });
 shoppingCart.addItem({ name: 'Tênis', price: 129.9 });
